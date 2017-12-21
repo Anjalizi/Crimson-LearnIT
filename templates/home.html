@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h2 align="center">Crimson</h2>
+    <p align="center">Think Cosmetics, Think Crimson</p>
+  </div>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Skin Type</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stype in stypes %}
+    <tr>
+      <td>{{ stype.name }}</td>
+      <td class="align-middle">{{ stype.description }}</td>
+      <td class="align-middle">{{ stype.image }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table
+{% endblock %}
+
+
