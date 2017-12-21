@@ -35,7 +35,7 @@
           </ul>
           {% else %}
           <form class="form-inline ml-auto">
-            <a href="#" class="btn btn-warning">Log In</a>
+            <a href="{% url 'login' %}" class="btn btn-warning">Log In</a>
             <a href="{% url 'signup' %}" class="btn btn-warning ml-2">Sign Up</a> <!-- ml = margin-left -->
             <a href="{% url 'contact' %}" class="btn btn-warning ml-2">Contact Us</a>
           </form>

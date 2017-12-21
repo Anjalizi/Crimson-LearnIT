@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class skintype(models.Model):
 	name = models.CharField(max_length=30, unique=True)
 	description = models.CharField(max_length=100)
-	image = models.ImageField(upload_to=None, max_length=100, default='vol5-4.png')
+	image = models.ImageField(max_length=100, default='vol5-4.png')
 
 	def __str__(self):
 		return self.name
