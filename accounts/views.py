@@ -1,5 +1,6 @@
 from django.contrib.auth import login as auth_login
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
 
 from .forms import SignUpForm
 

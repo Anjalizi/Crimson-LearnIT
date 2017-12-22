@@ -10,9 +10,14 @@ class skintype(models.Model):
 		return self.name
 
 class undertone(models.Model):
-	vein_color = models.CharField(max_length=30)
-	jewellery = models.CharField(max_length = 30)
+	category = models.CharField(max_length=30, default='Fill')
+	image_u = models.ImageField(max_length=100, default='vol5-4.png')
+	vein_color = models.CharField(max_length=100)
+	jewellery = models.CharField(max_length = 100)
 	skintone = models.ForeignKey(skintype, related_name='utones')
+
+	def __str__(self):
+		return self.category
 
 class contactpage(models.Model):
     suggestion = models.TextField(max_length=200)

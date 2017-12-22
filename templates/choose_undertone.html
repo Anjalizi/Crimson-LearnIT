@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 align="center">Choose Your Undertone</h1>
+
+<table class="table table-responsive table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Undertone</th>
+      <th>Image</th>
+      <th>By Veins</th>
+      <th>By Jewellery</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for utype in utypes %}
+    <tr>
+      <td>{{ utype.category }}</td>
+      <td class="align-middle">{{ utype.image_u }}</td>
+      <td class="align-middle">{{ utype.vein_color }}</td>
+      <td class="align-middle">{{ utype.jewellery }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table
+
+{% endblock %}

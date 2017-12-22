@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 align="center">Choose Your Skintone</h1>
+
+<table class="table table-responsive table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Skin Type</th>
+      <th>Image</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stype in stypes %}
+    <tr>
+      <td>{{ stype.name }}</td>
+      <td class="align-middle">{{ stype.image }}</td>
+      <td class="align-middle">{{ stype.description }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table
+
+<h3></h3>
+<a href="{%url 'choose_undertone'%}"><button class="btn btn-danger" style="margin-left:40%;margin-right:0%;margin-top:5%;margin-bottom:2%">Know Your Undertone</button></a>
+{% endblock %}

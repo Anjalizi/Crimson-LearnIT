@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import contactpage, skintype
+from .models import contactpage, skintype, undertone
 from .forms import NewTopicForm
 
 def home(request):
@@ -24,3 +24,11 @@ def contact(request):
 	else:
 		form = NewTopicForm()
 	return render(request, 'contact.html', {'form': form})
+
+def choose_skintone(request):
+	stypes = skintype.objects.all()
+	return render(request, 'choose_skintone.html', {'stypes': stypes})
+
+def choose_undertone(request):
+	utypes = undertone.objects.all()
+	return render(request, 'choose_undertone.html', {'utypes': utypes})

@@ -7,6 +7,8 @@ from accounts import views as accounts_views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^choose_skintone/$', views.choose_skintone, name='choose_skintone'),
+    url(r'^choose_undertone/$', views.choose_undertone, name='choose_undertone'),
     url(r'^signup/$', accounts_views.signup, name='signup'),
 
     url(r'^settings/password/$', auth_views.PasswordChangeView.as_view(template_name='password_change.html'),
@@ -36,4 +38,5 @@ urlpatterns = [
 
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^about/$', views.about, name='about'),
+    url(r'^admin/', admin.site.urls),
 ]

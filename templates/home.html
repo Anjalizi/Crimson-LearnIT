@@ -9,29 +9,14 @@
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    <h2 align="center">Crimson</h2>
-    <p align="center">Think Cosmetics, Think Crimson</p>
+    <p align="center">Crimson <br>
+      <small>Think Cosmetics, Think Crimson</small></p>
   </div>
 </div>
 
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th>Skin Type</th>
-      <th>Description</th>
-      <th>Image</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for stype in stypes %}
-    <tr>
-      <td>{{ stype.name }}</td>
-      <td class="align-middle">{{ stype.description }}</td>
-      <td class="align-middle">{{ stype.image }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table
+<a href="{% url 'choose_skintone' %}"><button class="btn btn-danger" style="margin-left:36%;margin-right:0%;margin-top:4%;margin-bottom:0%">Know Your Skintone & Undertone</button></a>
+
+<a href="{% url 'about' %}"><button class="btn btn-danger" style="margin-left:43.75%;margin-right:0%;margin-top:3%;margin-bottom:0%">About Us</button></a>
 {% endblock %}
 
 
