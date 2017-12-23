@@ -9,7 +9,7 @@
 {% block content %}
 <h1 align="center">Choose Your Undertone</h1>
 
-<table class="table table-responsive table-hover">
+<table class="table table-hover">
   <thead class="thead-dark">
     <tr>
       <th>Undertone</th>
@@ -21,8 +21,8 @@
   <tbody>
     {% for utype in utypes %}
     <tr>
-      <td>{{ utype.category }}</td>
-      <td class="align-middle">{{ utype.image_u }}</td>
+      <td class="align-middle">{{ utype.category }}</td>
+      <td class="align-middle"><img src="{% static utype.image_u %}"></td>
       <td class="align-middle">{{ utype.vein_color }}</td>
       <td class="align-middle">{{ utype.jewellery }}</td>
     </tr>
