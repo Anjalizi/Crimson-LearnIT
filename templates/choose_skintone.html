@@ -20,8 +20,8 @@
   <tbody>
     {% for stype in stypes %}
     <tr>
-      <td>{{ stype.name }}</td>
-      <td class="align-middle"><img src="{{ stype.image }}"></td>
+      <td class="align-middle">{{ stype.name }}</td>
+      <td class="align-middle"><img src="{% static stype.image %}"></td>
       <td class="align-middle">{{ stype.description }}</td>
     </tr>
     {% endfor %}
