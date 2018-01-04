@@ -7,20 +7,29 @@
 {% endblock %}
 
 {% block content %}
-<h1 align="center">Choose Your Undertone</h1>
+<h1 class="text-center logo my-4">
+  <a href="{% url 'home' %}">Choose Your Undertone</a>
+</h1>
 
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
+      <th>#</th>
       <th>Undertone</th>
       <th>Image</th>
       <th>By Veins</th>
       <th>By Jewellery</th>
     </tr>
   </thead>
+
   <tbody>
     {% for utype in utypes %}
     <tr>
+      <td class="align-middle">
+        <div class="radio">
+          <label><input type="radio" name="optradio"></label>
+        </div>
+      </td>
       <td class="align-middle">{{ utype.category }}</td>
       <td class="align-middle"><img src="{% static utype.image_u %}"></td>
       <td class="align-middle">{{ utype.vein_color }}</td>
@@ -28,6 +37,8 @@
     </tr>
     {% endfor %}
   </tbody>
-</table
+</table>
+
+<a href="{%url 'choose_undertone'%}"><button class="btn btn-danger" style="margin-left:37%;margin-right:0%;margin-top:5%;margin-bottom:2%">Know The Right Shades For You</button></a>
 
 {% endblock %}

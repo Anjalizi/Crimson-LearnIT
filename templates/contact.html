@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% load widget_tweaks %}
 
-{% block title %}Contact Us{% endblock %}
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %}
 
 {% block content %}
-<h2 align="center">Contact Us</h2>
-  <form method="post" novalidate>
-    {% csrf_token %}
-    {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Send</button>
-  </form>
+<h1 class="text-center logo my-4">
+	<a href="{% url 'home' %}">Contact Us</a>
+</h1>
+
+<form method="post" novalidate>
+	{% csrf_token %}
+	{% include 'includes/form.html' %}
+	<button type="submit" class="btn btn-success">Send</button>
+</form>
 {% endblock %}

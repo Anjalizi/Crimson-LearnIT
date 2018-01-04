@@ -10,7 +10,7 @@
     text-align:center;
     margin-bottom:0 !important;
     color: #ffffff;
-    font-size: 370%;
+    font-size: 420%;
     font-family: 'Codystar', cursive;
 }
 
@@ -23,5 +23,18 @@ body {
     width: 50%;
     margin: 0px auto;
     float: none;
+}
+
+.logo {
+    font-family: 'Amatic SC', cursive;
+}
+
+.logo a {
+  color: rgba(0,0,0,.9);
+}
+
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
 }
 

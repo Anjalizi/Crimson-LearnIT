@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 
-{% block body %}
-  <div class="container">
-    <h2 align="center">About Us</h2>
-  </div>
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center logo my-4">
+	<a href="{% url 'home' %}">About Us</a>
+</h1>
+
 {% endblock %}

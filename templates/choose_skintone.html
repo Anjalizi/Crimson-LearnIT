@@ -7,19 +7,29 @@
 {% endblock %}
 
 {% block content %}
-<h1 align="center">Choose Your Skintone</h1>
+<h1 class="text-center logo my-4">
+  <a href="{% url 'home' %}">Choose Your Skintone</a>
+</h1>
 
 <table class="table table-responsive table-hover">
   <thead class="thead-dark">
     <tr>
+      <th>#</th>
       <th>Skin Type</th>
       <th>Image</th>
       <th>Description</th>
     </tr>
   </thead>
+  
   <tbody>
     {% for stype in stypes %}
     <tr>
+      <td class="align-middle">
+        <div class="radio">
+          <label><input type="radio" name="optradio"></label>
+        </div>
+      </td>
+
       <td class="align-middle">{{ stype.name }}</td>
       <td class="align-middle"><img src="{% static stype.image %}"></td>
       <td class="align-middle">{{ stype.description }}</td>
