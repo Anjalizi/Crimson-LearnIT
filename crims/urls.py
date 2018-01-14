@@ -4,6 +4,9 @@ from django.contrib.auth import views as auth_views
 
 from skin import views
 from accounts import views as accounts_views
+from django.conf import settings
+from django.conf.urls.static import static
+from media_handling import views as media_views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
@@ -39,4 +42,10 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^about/$', views.about, name='about'),
     url(r'^admin/', admin.site.urls),
+
+    url(r'^uploads/$', media_views.uhome, name='uhome'),
+    url(r'^form/$', media_views.model_form_upload, name='model_form_upload'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
