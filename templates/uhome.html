@@ -1,13 +1,14 @@
 {% extends 'uploads.html' %}
 
 {% block content %}
-  <ul>
-    <li>
-      <a href="{% url 'model_form_upload' %}">Upload your face's picture here</a>
-    </li>
-  </ul>
+  {% if user.is_authenticated %}
+  <div align="center" class="col-md-3" style="background-color: #fff; text-align: center; border-radius: 25px; padding:10px; color: #fff; border: 2px solid red;">
+    <a href="{% url 'model_form_upload' %}">
+      <strong>Upload Your Face's Picture Here</strong>
+    </a>
+  </div><br>
 
-  <p>Uploaded files:</p>
+  <h2>Uploaded Files:</h2>
   <ul>
     {% for obj in documents %}
       <li>
@@ -16,4 +17,13 @@
       </li>
     {% endfor %}
   </ul>
+  <button type="btn btn-danger" type="submit">Find Your Shade</button>
+
+  {% else %}
+  <div align="center" class="col-md-3" style="background-color: #000; text-align: center; border-radius: 25px; padding:10px; color: #fff"><strong>Please Log In to Continue</strong>
+  </div><br>
+
+  <a href="{% url 'login' %}"><button type="submit"><b>Login</b></button></a>
+
+  {% endif %}
 {% endblock %}
