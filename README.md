@@ -33,7 +33,7 @@ pine.jpg : Sample image to be evaluated <br>
 #### To test the functionality on your own face simply put your face's image in the folder named 'media' and replace 'pine.jpg' by 'path_to_image.jpg'
 
 ## Languages, Tools and Frameworks Employed:
-Languages I opted for: #### HTML and CSS
+Languages I opted for: HTML and CSS
 
 * Django - Web framework in Python
 * HTML, CSS - Front end foundations
