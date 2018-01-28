@@ -5,7 +5,7 @@ Final implementation of the Learn IT, Girl! project which helps women choose the
 
 ```
 git clone https://github.com/Anjalizi/Crimson-LearnIT.git 
-pip install requirements.txt 
+pip install -r requirements.txt 
 python manage.py runserver
 ```
 
